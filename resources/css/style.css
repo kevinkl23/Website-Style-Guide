@@ -1,0 +1,395 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'REM';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/rem/v2/WnzgHAIoSDyHbRjfsYumpRvUPMLqnT0ebaiNbBRekw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/sourcecodepro/v22/HI_jiYsKILxRpg3hIP6sJ7fM7PqlOPHYvDP_W9O7GQTTbI1bTl0YRp2Wpi1S.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 400, 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevWnsUnxg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0RMImSLYBIv1o4X1M8cce4OdVisMz5nZRqy6cmmmU3t3NeCAAFOvV9SNjrwlNwjM6W3Y6K5WMxd-laLZx3lE4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400, 700;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunitosans/v15/pe0AMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfUVwoNnq4CLz0_kJ3xzHGGVFM.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiGyp8kv8JHgFVrJJLucHtAOvWDSA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400, 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'REM', sans-serif;
+    background:rgba(0, 0, 0, 0.7) url(../images/background.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+nav ul{
+    display: flex;
+    height: 50px;
+    position: relative;
+    float: right;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    position: absolute;
+    height: 50px;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+a:hover {
+    color: rgba(107, 98, 103, 0.8);
+    transition: color .1s ease-in;
+}
+
+nav ul li {
+    display: inline;
+    padding: 20px 20px;
+    margin-right: 70px;
+}
+
+nav ul li a {
+    font-size: 15px;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.jumbotron-title {
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.line {
+    width: 700px;
+    margin: 10px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.jumbotron-text {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.guide {
+    margin-bottom: 1000px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h1{
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+.section-line {
+    width: 250px;
+    margin: 0 auto;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.content-title {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.content-title h2 {
+    margin-bottom: 10px;
+}
+
+.content-line {
+    width: 200px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 0.5px solid rgba(255, 255, 255, 0.8);
+    width: 900px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-list {
+    width: 680px;
+    margin: 0 auto;
+}
+
+.color {
+    float: left;
+    margin: 20px;
+    width: 300px;
+    height: 100px;
+    border: 0.5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.color-desc {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#coolblue {
+    background-color: rgba(45, 93, 204, 1);
+}
+
+#pink {
+    background-color: rgba(217, 87, 217, 1);
+}
+
+#beige {
+    background-color: rgba(239, 217, 202, 1);
+}
+
+#mintgreen {
+    background-color: rgba(79, 224, 176, 1);
+}
+
+#font-box {
+    height: 900px;
+}
+
+.font-list {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.font {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 250px;
+    border: 0.5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.font-desc {
+    width: 100%;
+    height: 200px;
+}
+
+.font-desc h3{
+    margin: 20px 0 30px 20px;
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.font-desc p {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#source-code-pro {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#source-code-italic {
+    font-style: italic;
+}
+
+#source-code-bold {
+    font-weight: 700;
+}
+
+#nunito-sans {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+#nunito-sans-bold {
+    font-weight: 700;
+}
+
+#nunito-sans-italic {
+    font-style: italic;
+}
+
+#poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+#poppins-bold {
+    font-weight: 700;
+}
+
+#poppins-italic {
+    font-style: italic;
+}
+
+#text-box {
+    height: 900px;
+}
+
+.text-style-list {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.text-style {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 250px;
+    border: 0.5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.text-desc {
+    width: 100%;
+    height: 200px;
+}
+
+#header {
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#header p{
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.text-desc p {
+    margin: 20px 0 30px 20px;
+}
+
+.text-desc ul {
+    margin-left: 50px;
+}
+
+#header2 {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#header2 p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#paragraph {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#paragraph p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer {
+    position: relative;
+    margin-top: auto;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
